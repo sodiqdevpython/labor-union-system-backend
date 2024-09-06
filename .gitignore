@@ -4,3 +4,6 @@ env
 __pycache__
 migrations
 media
+db.sqlite3
+static
+./static

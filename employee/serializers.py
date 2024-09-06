@@ -13,9 +13,12 @@ class ProfessionSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class EmployeSerializer(serializers.ModelSerializer):
+
+    profession = ProfessionSerializer()
+
     class Meta:
         model = Employe
-        fields = '__all__'
+        fields = ('user', 'name', 'last_name', 'father_name', 'born_in', 'gender', 'employed_at', 'tel_number', 'profession', 'profile_image', 'score', 'is_verified', 'is_admin', )
 
 class RoleNoteSerializer(serializers.ModelSerializer):
     class Meta:
